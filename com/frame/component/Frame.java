@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import com.frame.listener.PanelListener;
+import java.awt.Font;
 import java.util.ArrayList;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -99,12 +100,16 @@ public class Frame extends JFrame {
         Panel oPanel1 = new Panel(200, 600, Color.RED);
         JLabel oLabelSkor = new JLabel("Skor: ");
         oLabelSkor.setPreferredSize(new Dimension(150, 50));
+        oLabelSkor.setFont(new Font("SansSerif", Font.PLAIN, 20));
         this.oLabelSkor = new Label("0", -1);
         this.oLabelSkor.setPreferredSize(new Dimension(150, 50));
+        this.oLabelSkor.setFont(new Font("SansSerif", Font.PLAIN, 20));
         JLabel oLabeLevel = new JLabel("Level: ");
+        oLabeLevel.setFont(new Font("SansSerif", Font.PLAIN, 20));
         oLabeLevel.setPreferredSize(new Dimension(150, 50));
         this.oLabelLevel = new Label("1", -2);
         this.oLabelLevel.setPreferredSize(new Dimension(150, 50));
+        this.oLabelLevel.setFont(new Font("SansSerif", Font.PLAIN, 20));
         this.oButtonMulaiBaru = new JButton("Mulai Baru");
         this.oButtonSimpan = new JButton("Simpan");
         this.oButtonBuka = new JButton("Buka");
@@ -124,13 +129,17 @@ public class Frame extends JFrame {
     public void PanelMenu(int skor, int level) {
         Panel oPanel1 = new Panel(200, 600, Color.RED);
         JLabel oLabelSkor = new JLabel("Skor: ");
+        oLabelSkor.setFont(new Font("SansSerif", Font.PLAIN, 20));
         oLabelSkor.setPreferredSize(new Dimension(150, 50));
         this.oLabelSkor = new Label(String.valueOf(skor), -1);
         this.oLabelSkor.setPreferredSize(new Dimension(150, 50));
+        this.oLabelSkor.setFont(new Font("SansSerif", Font.PLAIN, 20));
         JLabel oLabeLevel = new JLabel("Level: ");
+        oLabeLevel.setFont(new Font("SansSerif", Font.PLAIN, 20));
         oLabeLevel.setPreferredSize(new Dimension(150, 50));
         this.oLabelLevel = new Label(String.valueOf(level), -2);
         this.oLabelLevel.setPreferredSize(new Dimension(150, 50));
+        this.oLabelLevel.setFont(new Font("SansSerif", Font.PLAIN, 20));
         this.oButtonMulaiBaru = new JButton("Mulai Baru");
         this.oButtonSimpan = new JButton("Simpan");
         this.oButtonBuka = new JButton("Buka");
@@ -156,6 +165,7 @@ public class Frame extends JFrame {
         Panel pnlAngka = null;
         for (int i = 0; i < oPanelValue.size(); i++) {
             Label lblAngka = new Label(String.valueOf(oPanelValue.get(i)), i);
+            lblAngka.setFont(new Font("SansSerif", Font.PLAIN, 25));
             if (oPanelMatched.get(i) != 0) {
                 pnlAngka = new Panel(125, 125, Color.WHITE, i);
                 lblAngka.setMatched(true);
@@ -189,6 +199,7 @@ public class Frame extends JFrame {
         for (int i = 0; i < oAlgoritma.getListCard().size(); i++) {
             Panel pnlAngka = new Panel(125, 125, Color.GREEN, i);
             Label lblAngka = new Label(String.valueOf(oAlgoritma.getListCard().get(i)), i);
+            lblAngka.setFont(new Font("SansSerif", Font.PLAIN, 25));
             lblAngka.setForeground(Color.BLUE);
             lblAngka.setPreferredSize(new Dimension(125, 125));
             lblAngka.setVisible(false);

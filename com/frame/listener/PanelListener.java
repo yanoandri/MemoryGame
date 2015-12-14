@@ -32,8 +32,6 @@ public class PanelListener implements MouseListener {
     private Label oLabelSkor;
     private Label oLabelLevel;
     private Frame oFrame;
-    private int iIndex1;
-    private int iIndex2;
     private final int SKOR_MATCHED = 125;
 
     public PanelListener() {
@@ -45,8 +43,6 @@ public class PanelListener implements MouseListener {
         this.oSelectedLabel2 = null;
         this.oLabelSkor = null;
         this.oLabelLevel = null;
-        this.iIndex1 = 0;
-        this.iIndex2 = 0;
     }
 
     public PanelListener(ArrayList<Panel> oSelectedPanelList, ArrayList<Label> oSelectedLabelList) {
@@ -58,8 +54,6 @@ public class PanelListener implements MouseListener {
         this.oSelectedLabel2 = null;
         this.oLabelSkor = null;
         this.oLabelLevel = null;
-        this.iIndex1 = 0;
-        this.iIndex2 = 0;
     }
 
     /**
